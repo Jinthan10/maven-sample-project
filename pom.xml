@@ -57,4 +57,26 @@
             </plugin>
         </plugins>
     </build>
+	<distributionManagement>
+ <!-- Publish the versioned releases here -->
+ 
+  <snapshotRepository>
+  <id>snapshotnexus</id>
+  <name>snapshot nexus</name>
+  <url>http://192.168.68.113:8083/repository/maven-snapshots/</url>
+ </snapshotRepository>
+ 
+ <repository>
+  <id>releasenexus</id>
+  <name>release nexus</name>
+  <url>http://192.168.68.113:8083/repository/maven-releases/</url>
+ </repository>
+
+</distributionManagement>
+<scm>
+        <connection>scm:git:git@github.com:Jinthan10/maven-sample-project.git</connection>
+        <developerConnection>scm:git:git@github.com:Jinthan10/maven-sample-project.git</developerConnection>
+        <url>https://github.com/Jinthan10/maven-sample-project</url>
+        <tag>HEAD</tag>
+    </scm>
 </project>
